@@ -4,9 +4,8 @@ Software Engineering Practice Assignment
 Year 2 - Semester 2
 Applied Computing/Computer Forensics & Security
 ****
-Dylan Butler Parry
-Jordan Coady
-Dean Doyle
+****
+Dylan Butler Parry, Jordan Coady, Dean Doyle
 *****
 
 The code contained within here is an example of production code, as well as their associated unit testing cases.
