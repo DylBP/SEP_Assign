@@ -1,15 +1,36 @@
-import java.nio.charset.StandardCharsets;
-import java.util.Base64;
-import java.util.Objects;
 
 public class UserAccount {
-    public static boolean validateAdminLogin(String username, String password) {
-        String adminUsername = "cm9vdHVzZXI=";
-        String adminPassword = "cm9vdHBhc3N3b3JkMTIz";
+    private String username = "";
+    private String password = "";
+    private String email = "";
 
-        String encodedUsername = Base64.getEncoder().encodeToString(username.getBytes(StandardCharsets.UTF_8));
-        String encodedPassword = Base64.getEncoder().encodeToString(password.getBytes(StandardCharsets.UTF_8));
+    public UserAccount(String username, String password, String email) {
+        if(username != null) this.username = username;
+        if(password != null) this.password = password;
+        if(email != null) this.email = email;
+    }
 
-        return (Objects.equals(encodedUsername, adminUsername)) && (Objects.equals(encodedPassword, adminPassword));
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
